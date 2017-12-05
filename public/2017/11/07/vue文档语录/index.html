@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>vue文档语录 | icccc.cc   -   周瑜.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="Vue 2.0Vue 实例创建一个-Vue-的实例 每个 Vue 应用都是通过 Vue 函数创建一个新的 Vue 实例开始的；   虽然没有完全遵循 MVVM 模型，Vue 的设计无疑受到了它的启发。 因此在文档中经常会使用 vm (ViewModel 的简称) 这个变量名表示 Vue 实例。 当创建一个 Vue 实例时，你可以传入一个选项对象。 作为参考，你也可以在 API 文档 中浏览完整的选">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue文档语录">
+<meta property="og:url" content="http://doc2git.com/2017/11/07/vue文档语录/index.html">
+<meta property="og:site_name" content="icccc.cc   -   周瑜.com">
+<meta property="og:description" content="Vue 2.0Vue 实例创建一个-Vue-的实例 每个 Vue 应用都是通过 Vue 函数创建一个新的 Vue 实例开始的；   虽然没有完全遵循 MVVM 模型，Vue 的设计无疑受到了它的启发。 因此在文档中经常会使用 vm (ViewModel 的简称) 这个变量名表示 Vue 实例。 当创建一个 Vue 实例时，你可以传入一个选项对象。 作为参考，你也可以在 API 文档 中浏览完整的选">
+<meta property="og:image" content="https://cn.vuejs.org/images/lifecycle.png">
+<meta property="og:updated_time" content="2017-12-05T12:16:05.887Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue文档语录">
+<meta name="twitter:description" content="Vue 2.0Vue 实例创建一个-Vue-的实例 每个 Vue 应用都是通过 Vue 函数创建一个新的 Vue 实例开始的；   虽然没有完全遵循 MVVM 模型，Vue 的设计无疑受到了它的启发。 因此在文档中经常会使用 vm (ViewModel 的简称) 这个变量名表示 Vue 实例。 当创建一个 Vue 实例时，你可以传入一个选项对象。 作为参考，你也可以在 API 文档 中浏览完整的选">
+<meta name="twitter:image" content="https://cn.vuejs.org/images/lifecycle.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.14">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">doc2git</h5>
+          <a href="mailto:ivuex@yahoo.com" title="ivuex@yahoo.com" class="mail">ivuex@yahoo.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/mirrors"  >
+                <i class="icon icon-lg icon-home"></i>
+                镜像
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/note"  >
+                <i class="icon icon-lg icon-sticky-note"></i>
+                便签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/things"  >
+                <i class="icon icon-lg icon-things"></i>
+                计划列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                参考链群
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-categories"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/ivuex" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/edit-code-view--pad"  >
+                <i class="icon icon-lg icon-read-manual"></i>
+                读文档
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+            <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vue文档语录</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off"
+                   placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <!-- Below lines Added by doc2git -->
+        <div class="comments">
+            <!--<a id="noteWrap" href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="note">-->
+                <!--<i id="noteBtn" style="font-weight:900;" class="icon icon-lg icon-sticky-note-o"></i>-->
+            <!--</a>-->
+            <!--<div id="stickyNoteWrap" class="global-share"-->
+                 <!--style="background-color:transparent; padding:4px 6px; display:flex; justify-content:center box-shadow:0 0 2px 0 rgba(0,0,0,0.16), 0 0px 0px 0 rgba(0,0,0,0.12)">-->
+                <!--<iframe-->
+                    <!--background="transparent"-->
+                    <!--width="252"-->
+                    <!--height="290"-->
+                    <!--box-sizing="border-box"-->
+                    <!--frameborder="0"-->
+                    <!--scrolling="no"-->
+                    <!--marginheight="0"-->
+                    <!--marginwidth="0"-->
+                    <!--src='http://localhost:8080/note'>-->
+                    <!--style="padding:8px 6px"-->
+                <!--</iframe>-->
+            <!--</div>-->
+        </div>
+        <!-- Above lines Added by doc2git -->
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vue文档语录</h1>
+        <h5 class="subtitle">
+            
+            <time datetime="2017-11-06T18:14:50.581Z" itemprop="datePublished" class="page-time">
+  2017-11-07
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Vue-2-0"><span class="post-toc-number">1.</span> <span class="post-toc-text">Vue 2.0</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue-实例"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Vue 实例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建一个-Vue-的实例"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">创建一个-Vue-的实例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据与方法"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">数据与方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实例生命周期"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">实例生命周期</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#模板语法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">模板语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插值"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">插值</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文本"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">文本</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#计算属性和观察者"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">计算属性和观察者</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#计算属性"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">计算属性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基础例子"><span class="post-toc-number">1.3.1.1.</span> <span class="post-toc-text">基础例子</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#计算属性缓存-vs-方法"><span class="post-toc-number">1.3.1.2.</span> <span class="post-toc-text">计算属性缓存 vs 方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#计算属性-vs-侦听属性"><span class="post-toc-number">1.3.1.3.</span> <span class="post-toc-text">计算属性 vs 侦听属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#计算属性的-setter"><span class="post-toc-number">1.3.1.4.</span> <span class="post-toc-text">计算属性的 setter</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#侦听器"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">侦听器</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Class-与-Style-绑定"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Class 与 Style 绑定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绑定内联样式"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">绑定内联样式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对象语法"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">#对象语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组语法"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">#数组语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自动添加前缀"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">#自动添加前缀</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多重值"><span class="post-toc-number">1.5.4.</span> <span class="post-toc-text">#多重值</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#条件渲染"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">条件渲染</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-if"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">v-if</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在-lt-template-gt-元素上使用-v-if-条件渲染分组"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">在-lt-template-gt-元素上使用-v-if-条件渲染分组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-else"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">v-else</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-else-if"><span class="post-toc-number">1.6.4.</span> <span class="post-toc-text">v-else-if</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用key管理可复用的元素"><span class="post-toc-number">1.6.5.</span> <span class="post-toc-text">用key管理可复用的元素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-show"><span class="post-toc-number">1.6.6.</span> <span class="post-toc-text">v-show</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-if-vs-v-show"><span class="post-toc-number">1.6.7.</span> <span class="post-toc-text">v-if vs v-show</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-if与v-for-一起使用"><span class="post-toc-number">1.6.8.</span> <span class="post-toc-text">v-if与v-for-一起使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#列表渲染"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">列表渲染</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用v-for把一个数组对应为一组元素"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">用v-for把一个数组对应为一组元素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个对象的-v-for"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">一个对象的-v-for</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#key"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">key</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组更新检测"><span class="post-toc-number">1.7.4.</span> <span class="post-toc-text">数组更新检测</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#变异方法"><span class="post-toc-number">1.7.4.1.</span> <span class="post-toc-text">变异方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#替换数组"><span class="post-toc-number">1.7.4.2.</span> <span class="post-toc-text">替换数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#相比之下，也有非变异-non-mutating-method-方法，"><span class="post-toc-number">1.7.4.3.</span> <span class="post-toc-text">相比之下，也有非变异 (non-mutating method) 方法，</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">1.7.4.4.</span> <span class="post-toc-text">注意事项</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#对象更改检测注意事项"><span class="post-toc-number">1.7.4.5.</span> <span class="post-toc-text">对象更改检测注意事项</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#显示过滤-排序结果"><span class="post-toc-number">1.7.5.</span> <span class="post-toc-text">显示过滤/排序结果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一段取值范围的v-for"><span class="post-toc-number">1.7.6.</span> <span class="post-toc-text">一段取值范围的v-for</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-for-on-a"><span class="post-toc-number">1.7.7.</span> <span class="post-toc-text">v-for on a </span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-for-with-v-if"><span class="post-toc-number">1.7.8.</span> <span class="post-toc-text">v-for with v-if</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个组件的v-for"><span class="post-toc-number">1.7.9.</span> <span class="post-toc-text">一个组件的v-for</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件处理"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">事件处理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#监听事件"><span class="post-toc-number">1.8.1.</span> <span class="post-toc-text">监听事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方法事件处理器"><span class="post-toc-number">1.8.2.</span> <span class="post-toc-text">方法事件处理器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内联处理器里的方法"><span class="post-toc-number">1.8.3.</span> <span class="post-toc-text">内联处理器里的方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为了解决这个问题，Vue-js-为-v-on-提供了事件修饰符。"><span class="post-toc-number">1.8.4.</span> <span class="post-toc-text">为了解决这个问题，Vue.js 为 v-on 提供了事件修饰符。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#stop"><span class="post-toc-number">1.8.4.0.1.</span> <span class="post-toc-text">.stop</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#prevent"><span class="post-toc-number">1.8.4.0.2.</span> <span class="post-toc-text">.prevent</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#capture"><span class="post-toc-number">1.8.4.0.3.</span> <span class="post-toc-text">.capture</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#self"><span class="post-toc-number">1.8.4.0.4.</span> <span class="post-toc-text">.self</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#once"><span class="post-toc-number">1.8.4.0.5.</span> <span class="post-toc-text">.once</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-vue文档语录"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vue文档语录</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-11-07 02:14:50" datetime="2017-11-06T18:14:50.581Z"  itemprop="datePublished">2017-11-07</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Vue-2-0"><a href="#Vue-2-0" class="headerlink" title="Vue 2.0"></a>Vue 2.0</h1><h2 id="Vue-实例"><a href="#Vue-实例" class="headerlink" title="Vue 实例"></a>Vue 实例</h2><h3 id="创建一个-Vue-的实例"><a href="#创建一个-Vue-的实例" class="headerlink" title="创建一个-Vue-的实例"></a>创建一个-Vue-的实例</h3><ul>
+<li>每个 Vue 应用都是通过 Vue 函数创建一个新的 Vue 实例开始的；</li>
+</ul>
+<ul>
+<li>虽然没有完全遵循 MVVM 模型，Vue 的设计无疑受到了它的启发。<ul>
+<li>因此在文档中经常会使用 vm (ViewModel 的简称) 这个变量名表示 Vue 实例。</li>
+<li>当创建一个 Vue 实例时，你可以传入一个选项对象。</li>
+<li>作为参考，你也可以在 API 文档 中浏览完整的选项列表。</li>
+</ul>
+</li>
+<li>一个 Vue 应用由一个通过 new Vue 创建的根 Vue 实例，<ul>
+<li>以及可选的嵌套的、可复用的组件树组成。</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据与方法"><a href="#数据与方法" class="headerlink" title="数据与方法"></a>数据与方法</h3><ul>
+<li><p>当一个 Vue 实例被创建时，</p>
+<ul>
+<li>它向 Vue 的响应式系统中加入了其 data 对象中能找到的所有的属性。</li>
+<li>当这些属性的值发生改变时，</li>
+<li>视图将会产生“响应”，即匹配更新为新的值。</li>
+<li>只有当实例被创建时 data 中存在的属性是响应式的。</li>
+<li>那么对 b 的改动将不会触发任何视图的更新。</li>
+<li>如果你知道你会在晚些时候需要一个属性，</li>
+<li>但是一开始它为空或不存在，</li>
+<li>那么你仅需要设置一些初始值。</li>
+</ul>
+</li>
+<li><p>除了 data 属性，</p>
+<ul>
+<li>Vue 实例暴露了一些有用的实例属性与方法。</li>
+<li>它们都有前缀 $，</li>
+<li>以便与用户定义的属性区分开来。</li>
+<li>在未来，你可以在 API 参考查阅到完整的实例属性和方法的列表。</li>
+</ul>
+</li>
+</ul>
+<h3 id="实例生命周期"><a href="#实例生命周期" class="headerlink" title="实例生命周期"></a>实例生命周期</h3><ul>
+<li>每个 Vue 实例在被创建之前都要经过一系列的初始化过程。<ul>
+<li>例如需要设置数据监听、编译模板、挂载实例到 DOM、在数据变化时更新 DOM 等。</li>
+<li>同时在这个过程中也会运行一些叫做生命周期钩子的函数，</li>
+<li>给予用户机会在一些特定的场景下添加他们自己的代码。</li>
+<li>‘比如 created 钩子可以用来在一个实例被创建之后执行代码;’</li>
+</ul>
+</li>
+<li>也有一些其它的钩子，<ul>
+<li>在实例生命周期的不同场景下调用，</li>
+</ul>
+</li>
+<li>如 mounted、updated、destroyed。钩子的 this 指向调用它的 Vue 实例。    <ul>
+<li>不要在选项属性或回调上使用箭头函数；</li>
+<li>因为箭头函数是和父级上下文绑定在一起的，</li>
+<li>this 不会是如你所预期的 Vue 实例，</li>
+<li>经常导致 Uncaught TypeError: Cannot read property of undefined,</li>
+<li>或 Uncaught TypeError: this.myMethod is not a function 之类的错误。</li>
+</ul>
+</li>
+<li>生命周期图示    <ul>
+<li>下图说明了实例的生命周期。</li>
+<li>你不需要立马弄明白所有的东西，</li>
+<li>不过随着你的不断学习和使用，</li>
+<li>它的参考价值会越来越高。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cn.vuejs.org/images/lifecycle.png" alt="vue生命周期"></p>
+<h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><ul>
+<li>Vue.js 使用了基于 HTML 的模板语法，<ul>
+<li>允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。</li>
+<li>所有 Vue.js 的模板都是合法的 HTML ，</li>
+<li>所以能被遵循规范的浏览器和 HTML 解析器解析。</li>
+</ul>
+</li>
+<li>在底层的实现上，<ul>
+<li>Vue 将模板编译成虚拟 DOM 渲染函数。</li>
+<li>结合响应系统，在应用状态改变时，</li>
+<li>Vue 能够智能地计算出重新渲染组件的最小代价并应用到 DOM 操作上。</li>
+</ul>
+</li>
+<li>如果你熟悉虚拟 DOM 并且偏爱 JavaScript 的原始力量，<ul>
+<li>你也可以不用模板，</li>
+<li>直接写渲染 (render) 函数，</li>
+<li>使用可选的 JSX 语法。</li>
+</ul>
+</li>
+</ul>
+<h3 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h3><h4 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h4><ul>
+<li>数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值;</li>
+</ul>
+<ul>
+<li>Mustache 标签将会被替代为对应数据对象上 msg 属性的值。<ul>
+<li>无论何时，</li>
+<li>绑定的数据对象上 msg 属性发生了改变，</li>
+<li>插值处的内容都会更新。</li>
+</ul>
+</li>
+<li>通过使用 v-once 指令，<ul>
+<li>你也能执行一次性地插值，</li>
+<li>当数据改变时，插值处的内容不会更新。</li>
+<li>但请留心这会影响到该节点上所有的数据绑定:</li>
+<li><span v-once="">这个将不会改变: </span></li>
+</ul>
+</li>
+</ul>
+<h2 id="计算属性和观察者"><a href="#计算属性和观察者" class="headerlink" title="计算属性和观察者"></a>计算属性和观察者</h2><h3 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h3><ul>
+<li><p>模板内的表达式非常便利，</p>
+<ul>
+<li>但是设计它们的初衷是用于简单运算的。</li>
+<li>在模板中放入太多的逻辑会让模板过重且难以维护, 如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;example&quot;&gt;  &#123;&#123; message.split(&apos;&apos;).reverse().join(&apos;&apos;) &#125;&#125;  &lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>在这个地方，模板不再是简单的声明式逻辑。</p>
+<ul>
+<li>你必须看一段时间才能意识到，</li>
+<li>这里是想要显示变量 message 的翻转字符串。</li>
+<li>当你想要在模板中多次引用此处的翻转字符串时，就会更加难以处理。</li>
+<li>所以，’对于任何复杂逻辑，你都应当使用计算属性。’    </li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><h4 id="基础例子"><a href="#基础例子" class="headerlink" title="基础例子"></a><a href="https://cn.vuejs.org/v2/guide/computed.html#基础例子" target="_blank" rel="external">基础例子</a></h4></li>
+<li><h4 id="计算属性缓存-vs-方法"><a href="#计算属性缓存-vs-方法" class="headerlink" title="计算属性缓存 vs 方法"></a><a href="https://cn.vuejs.org/v2/guide/computed.html#计算属性缓存-vs-方法" target="_blank" rel="external">计算属性缓存 vs 方法</a></h4></li>
+<li><h4 id="计算属性-vs-侦听属性"><a href="#计算属性-vs-侦听属性" class="headerlink" title="计算属性 vs 侦听属性"></a><a href="https://cn.vuejs.org/v2/guide/computed.html#计算属性-vs-侦听属性" target="_blank" rel="external">计算属性 vs 侦听属性</a></h4></li>
+<li><h4 id="计算属性的-setter"><a href="#计算属性的-setter" class="headerlink" title="计算属性的 setter"></a><a href="https://cn.vuejs.org/v2/guide/computed.html#计算属性的-setter" target="_blank" rel="external">计算属性的 setter</a></h4></li>
+</ol>
+<h3 id="侦听器"><a href="#侦听器" class="headerlink" title="侦听器"></a>侦听器</h3><ul>
+<li>虽然计算属性在大多数情况下更合适，<ul>
+<li>但有时也需要一个自定义的侦听器。</li>
+<li>这就是为什么 Vue 通过 watch选项提供了一个更通用的方法，来响应数据的变化。</li>
+<li>当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。</li>
+</ul>
+</li>
+<li>watch 选项允许我们执行异步操作 (访问一个 API)，<ul>
+<li>限制我们执行该操作的频率，</li>
+<li>并在我们得到最终结果前，设置中间状态。</li>
+<li>这些都是计算属性无法做到的。    </li>
+<li>除了 watch 选项之外，您还可以使用命令式的 vm.$watch API。    </li>
+</ul>
+</li>
+</ul>
+<h2 id="Class-与-Style-绑定"><a href="#Class-与-Style-绑定" class="headerlink" title="Class 与 Style 绑定"></a>Class 与 Style 绑定</h2><ul>
+<li><p>操作元素的 class 列表和内联样式是数据绑定的一个常见需求。</p>
+<ul>
+<li>因为它们都是属性，所以我们可以用 v-bind 处理它们：</li>
+<li>只需要通过表达式计算出字符串结果即可。</li>
+<li>不过，字符串拼接麻烦且易错。</li>
+<li>因此，在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。</li>
+<li>表达式结果的类型除了字符串之外，还可以是对象或数组。</li>
+</ul>
+</li>
+<li><p>绑定 HTML Class</p>
+<ul>
+<li><a href="https://cn.vuejs.org/v2/guide/class-and-style.html#对象语法" target="_blank" rel="external">#对象语法</a></li>
+<li>我们可以传给 v-bind:class 一个对象，以动态地切换 class;<ul>
+<li>上面的语法表示 active 这个 class 存在与否将取决于数据属性 isActive 的 truthiness。</li>
+<li>你可以在对象中传入更多属性来动态切换多个 class，</li>
+<li>此外，v-bind:class 指令也可以与普通的 class 属性共存。</li>
+<li>绑定的数据对象不必内联定义在模板里;</li>
+</ul>
+<ul>
+<li>渲染的结果和上面一样。</li>
+</ul>
+<ul>
+<li>‘我们也可以在这里绑定一个返回对象的计算属性,这是一个常用且强大的模式’;</li>
+</ul>
+</li>
+<li><a href="https://cn.vuejs.org/v2/guide/class-and-style.html#数组语法" target="_blank" rel="external">#数组语法</a></li>
+<li>我们可以把一个数组传给 v-bind:class，以应用一个 class 列表;<ul>
+<li>如果你也想根据条件切换列表中的 class，可以用三元表达式;</li>
+<li>不过，当有多个条件 class 时这样写有些繁琐。</li>
+<li>所以在数组语法中也可以使用对象语法;</li>
+</ul>
+</li>
+<li><a href="https://cn.vuejs.org/v2/guide/class-and-style.html#用在组件上" target="_blank" rel="external">#用在组件上</a></li>
+</ul>
+<ul>
+<li>‘当在一个自定义组件上使用 class 属性时，’</li>
+<li>‘这些类将被添加到根元素上面。’</li>
+<li>‘这个元素上已经存在的类不会被覆盖。’</li>
+<li>‘对于带数据绑定 class 也同样适用; ‘</li>
+</ul>
+</li>
+</ul>
+<h2 id="绑定内联样式"><a href="#绑定内联样式" class="headerlink" title="绑定内联样式"></a>绑定内联样式</h2><h3 id="对象语法"><a href="#对象语法" class="headerlink" title="#对象语法"></a><a href="https://cn.vuejs.org/v2/guide/class-and-style.html#对象语法-1" target="_blank" rel="external">#对象语法</a></h3><ul>
+<li>v-bind:style 的对象语法十分直观——看着非常像 CSS，<ul>
+<li>但其实是一个 JavaScript 对象。</li>
+<li>CSS 属性名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用单引号括起来) 来命名;</li>
+<li>直接绑定到一个样式对象通常更好，这会让模板更清晰;</li>
+<li>同样的，对象语法常常结合返回对象的计算属性使用。<h3 id="数组语法"><a href="#数组语法" class="headerlink" title="#数组语法"></a><a href="https://cn.vuejs.org/v2/guide/class-and-style.html#数组语法-1" target="_blank" rel="external">#数组语法</a></h3></li>
+<li>v-bind:style 的数组语法可以将多个样式对象应用到同一个元素上;<h3 id="自动添加前缀"><a href="#自动添加前缀" class="headerlink" title="#自动添加前缀"></a><a href="https://cn.vuejs.org/v2/guide/class-and-style.html#自动添加前缀" target="_blank" rel="external">#自动添加前缀</a></h3></li>
+<li>当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS 属性时，如 transform，Vue.js 会自动侦测并添加相应的前缀。<h3 id="多重值"><a href="#多重值" class="headerlink" title="#多重值"></a><a href="https://cn.vuejs.org/v2/guide/class-and-style.html#多重值" target="_blank" rel="external">#多重值</a></h3></li>
+</ul>
+<ul>
+<li>从 2.3.0 起你可以为 style 绑定中的属性提供一个包含多个值的数组，</li>
+</ul>
+<ul>
+<li>常用于提供多个带前缀的值;</li>
+</ul>
+</li>
+</ul>
+<h2 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h2><h3 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a><a href="https://cn.vuejs.org/v2/guide/conditional.html#v-if" target="_blank" rel="external">v-if</a></h3><h3 id="在-lt-template-gt-元素上使用-v-if-条件渲染分组"><a href="#在-lt-template-gt-元素上使用-v-if-条件渲染分组" class="headerlink" title="在-lt-template-gt-元素上使用-v-if-条件渲染分组"></a><a href="https://cn.vuejs.org/v2/guide/conditional.html#在-lt-template-gt-元素上使用-v-if-条件渲染分组" target="_blank" rel="external">在-lt-template-gt-元素上使用-v-if-条件渲染分组</a></h3><ul>
+<li>因为 v-if 是一个指令，所以必须将它添加到一个元素上。<ul>
+<li>但是如果想切换多个元素呢？</li>
+<li>此时可以把一个 <template> 元素当做不可见的包裹元素，并在上面使用 v-if。</template></li>
+<li>最终的渲染结果将不包含 <template> 元素。<h3 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a><a href="https://cn.vuejs.org/v2/guide/conditional.html#v-else" target="_blank" rel="external">v-else</a></h3></template></li>
+</ul>
+</li>
+<li>可以使用 v-else 指令来表示 v-if 的“else 块”;<ul>
+<li>v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。<h3 id="v-else-if"><a href="#v-else-if" class="headerlink" title="v-else-if"></a><a href="https://cn.vuejs.org/v2/guide/conditional.html#v-else-if" target="_blank" rel="external">v-else-if</a></h3><blockquote>
+<p>2.1.0 新增</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>v-else-if，顾名思义，充当 v-if 的“else-if 块”，可以连续使用;<ul>
+<li>类似于 v-else，v-else-if 也必须紧跟在带 v-if 或者 v-else-if 的元素之后。</li>
+</ul>
+</li>
+</ul>
+<h3 id="用key管理可复用的元素"><a href="#用key管理可复用的元素" class="headerlink" title="用key管理可复用的元素"></a><a href="https://cn.vuejs.org/v2/guide/conditional.html#用-key-管理可复用的元素" target="_blank" rel="external">用key管理可复用的元素</a></h3><ul>
+<li>Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从头开始渲染。<ul>
+<li>这么做除了使 Vue 变得非常快之外，还有其它一些好处: (局部更新DOM)[笔者注]。</li>
+</ul>
+<ul>
+<li>这样也不总是符合实际需求，<ul>
+<li>所以 Vue 为你提供了一种方式来表达”这两个元素是完全独立的，不要复用它们”(递归替换key属性所在的元素)[笔者注]。</li>
+<li>只需添加一个具有唯一值的 key 属性即可,</li>
+<li>每次切换时，输入框都将被重新渲染。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a><a href="https://cn.vuejs.org/v2/guide/conditional.html#v-show" target="_blank" rel="external">v-show</a></h3><ul>
+<li>另一个用于根据条件展示元素的选项是 v-show 指令。<ul>
+<li>不同的是带有 v-show 的元素始终会被渲染并保留在 DOM 中。</li>
+<li>v-show 只是简单地切换元素的 CSS 属性 display。</li>
+<li>‘注意，v-show 不支持 <template> 元素，也不支持 v-else’。</template></li>
+</ul>
+</li>
+</ul>
+<h3 id="v-if-vs-v-show"><a href="#v-if-vs-v-show" class="headerlink" title="v-if vs v-show"></a><a href="https://cn.vuejs.org/v2/guide/conditional.html#v-if-vs-v-show" target="_blank" rel="external">v-if vs v-show</a></h3><ul>
+<li>v-if 是“真正”的条件渲染，<ul>
+<li>因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。</li>
+</ul>
+</li>
+<li>v-if 也是惰性的：如果在初始渲染时条件为假，<ul>
+<li>则什么也不做——直到条件第一次变为真时，</li>
+<li>才会开始渲染条件块。</li>
+</ul>
+</li>
+<li>相比之下，v-show 就简单得多——不管初始条件是什么，<ul>
+<li>元素总是会被渲染，</li>
+<li>并且只是简单地基于 CSS 进行切换。</li>
+</ul>
+<ul>
+<li>一般来说，</li>
+</ul>
+<ul>
+<li>v-if 有更高的切换开销，</li>
+<li>而 v-show 有更高的初始渲染开销。</li>
+</ul>
+<ul>
+<li>因此，</li>
+</ul>
+<ul>
+<li>如果需要非常频繁地切换，</li>
+<li>则使用 v-show 较好；</li>
+</ul>
+<ul>
+<li>如果在运行时条件很少改变，</li>
+</ul>
+<ul>
+<li>则使用 v-if 较好。</li>
+</ul>
+</li>
+</ul>
+<h3 id="v-if与v-for-一起使用"><a href="#v-if与v-for-一起使用" class="headerlink" title="v-if与v-for-一起使用"></a><a href="https://cn.vuejs.org/v2/guide/conditional.html#v-if-与-v-for-一起使用" target="_blank" rel="external">v-if与v-for-一起使用</a></h3><ul>
+<li>当 v-if 与 v-for 一起使用时，<ul>
+<li>v-for 具有比 v-if 更高的优先级。</li>
+</ul>
+</li>
+</ul>
+<h2 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a><a href="https://cn.vuejs.org/v2/guide/list.html" target="_blank" rel="external">列表渲染</a></h2><h3 id="用v-for把一个数组对应为一组元素"><a href="#用v-for把一个数组对应为一组元素" class="headerlink" title="用v-for把一个数组对应为一组元素"></a><a href="https://cn.vuejs.org/v2/guide/list.html#用-v-for-把一个数组对应为一组元素" target="_blank" rel="external">用v-for把一个数组对应为一组元素</a></h3><ul>
+<li>我们用 v-for 指令根据一组数组的选项列表进行渲染。<ul>
+<li>v-for 指令需要使用 item in items 形式的特殊语法，</li>
+<li>items 是源数据数组并且 item 是数组元素迭代的别名。</li>
+</ul>
+</li>
+<li>在 v-for 块中，<ul>
+<li>我们拥有对父作用域属性的完全访问权限。</li>
+<li>v-for 还支持一个可选的第二个参数为当前项的索引。 </li>
+<li>(实战中编译时可能出错,建议不用of,只用in)[笔者注]你也可以用 of 替代 in 作为分隔符，因为它是最接近 JavaScript 迭代器的语法;</li>
+</ul>
+</li>
+</ul>
+<h3 id="一个对象的-v-for"><a href="#一个对象的-v-for" class="headerlink" title="一个对象的-v-for"></a><a href="https://cn.vuejs.org/v2/guide/list.html#一个对象的-v-for" target="_blank" rel="external">一个对象的-v-for</a></h3><ul>
+<li>你也可以用 v-for 通过一个对象的属性来迭代。<ul>
+<li>也可以提供第二个的参数为键名</li>
+<li>第三个参数为索引 <blockquote>
+<p>在遍历对象时，<br>是按 Object.keys() 的结果遍历，<br>但是不能保证它的结果在不同的 JavaScript 引擎下是一致的。 </p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="key"><a href="#key" class="headerlink" title="key"></a><a href="https://cn.vuejs.org/v2/guide/list.html#key" target="_blank" rel="external">key</a></h3><ul>
+<li><p>当 Vue.js 用 v-for 正在更新已渲染过的元素列表时，</p>
+<ul>
+<li>它默认用“就地复用”策略。</li>
+</ul>
+</li>
+<li><p>如果数据项的顺序被改变，</p>
+<ul>
+<li>Vue 将不会移动 DOM 元素来匹配数据项的顺序，</li>
+<li>而是简单复用此处每个元素，</li>
+<li>并且确保它在特定索引下显示已被渲染过的每个元素。</li>
+<li>这个类似 Vue 1.x 的 track-by=”$index” 。</li>
+</ul>
+</li>
+<li><p>这个默认的模式是高效的，</p>
+<ul>
+<li>但是只适用于不依赖子组件状态或临时 DOM 状态 (例如：表单输入值) 的列表渲染输出。</li>
+</ul>
+</li>
+<li><p>为了给 Vue 一个提示，</p>
+<ul>
+<li>以便它能跟踪每个节点的身份，</li>
+</ul>
+<ul>
+<li>从而重用和重新排序现有元素，你需要为每项提供一个唯一 key 属性。</li>
+<li>理想的 key 值是每项都有的且唯一的 id。</li>
+<li>这个特殊的属性相当于 Vue 1.x 的 track-by ，</li>
+<li>但它的工作方式类似于一个属性，</li>
+<li>所以你需要用 v-bind 来绑定动态值 (在这里使用简写);</li>
+</ul>
+<ul>
+<li>建议尽可能在使用 v-for 时提供 key，</li>
+</ul>
+<ul>
+<li>除非遍历输出的 DOM 内容非常简单，</li>
+<li>或者是刻意依赖默认行为以获取性能上的提升。</li>
+</ul>
+<ul>
+<li>因为它是 Vue 识别节点的一个通用机制，</li>
+</ul>
+<ul>
+<li>key 并不与 v-for 特别关联，</li>
+<li>key 还具有其他用途，</li>
+<li>我们将在后面的指南中看到其他用途。 </li>
+</ul>
+</li>
+</ul>
+<h3 id="数组更新检测"><a href="#数组更新检测" class="headerlink" title="数组更新检测"></a><a href="https://cn.vuejs.org/v2/guide/list.html#数组更新检测" target="_blank" rel="external">数组更新检测</a></h3><h4 id="变异方法"><a href="#变异方法" class="headerlink" title="变异方法"></a><a href="https://cn.vuejs.org/v2/guide/list.html#变异方法" target="_blank" rel="external">变异方法</a></h4><ul>
+<li>Vue 包含一组观察数组的变异方法，所以它们也将会触发视图更新。这些方法如下：<ul>
+<li>push()</li>
+<li>pop()</li>
+<li>shift()</li>
+<li>unshift()</li>
+<li>splice()</li>
+<li>sort()</li>
+<li>reverse()</li>
+</ul>
+</li>
+</ul>
+<h4 id="替换数组"><a href="#替换数组" class="headerlink" title="替换数组"></a><a href="https://cn.vuejs.org/v2/guide/list.html#替换数组" target="_blank" rel="external">替换数组</a></h4><ul>
+<li>变异方法 (mutation method)，<ul>
+<li>顾名思义，会改变被这些方法调用的原始数组。</li>
+</ul>
+</li>
+</ul>
+<h4 id="相比之下，也有非变异-non-mutating-method-方法，"><a href="#相比之下，也有非变异-non-mutating-method-方法，" class="headerlink" title="相比之下，也有非变异 (non-mutating method) 方法，"></a>相比之下，也有非变异 (non-mutating method) 方法，</h4><ul>
+<li>例如：filter(), concat() 和 slice() 。<ul>
+<li>这些不会改变原始数组，但总是返回一个新数组。</li>
+<li>当使用非变异方法时，可以用新数组替换旧数组(覆盖式赋值)[笔者注]；
+　<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a><a href="https://cn.vuejs.org/v2/guide/list.html#注意事项" target="_blank" rel="external">注意事项</a></h4></li>
+</ul>
+</li>
+<li>由于 JavaScript 的限制，Vue 不能检测以下变动的数组：<ul>
+<li>当你利用索引直接设置一个项时，例如：vm.items[indexOfItem] = newValue</li>
+<li>当你修改数组的长度时，例如：vm.items.length = newLength</li>
+</ul>
+</li>
+<li><p>为了解决第一类问题，</p>
+<ul>
+<li>以下两种方式都可以实现和 vm.items[indexOfItem] = newValue 相同的效果，</li>
+</ul>
+<ul>
+<li><p>同时也将触发状态更新:</p>
+<ul>
+<li>eg 1: <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// Vue.set</div><div class="line">　　Vue.set(example1.items, indexOfItem, newValue)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- eg 2:
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// Array.prototype.splice</div><div class="line">example1.items.splice(indexOfItem, 1, newValue)</div></pre></td></tr></table></figure>
+</code></pre><ul>
+<li>为了解决第二类问题，可以使用 splice：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">example1.items.splice(newLength);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="对象更改检测注意事项"><a href="#对象更改检测注意事项" class="headerlink" title="对象更改检测注意事项"></a><a href="https://cn.vuejs.org/v2/guide/list.html#对象更改检测注意事项" target="_blank" rel="external">对象更改检测注意事项</a></h4><ul>
+<li>还是由于 JavaScript 的限制，Vue 不能检测对象属性的添加或删除;</li>
+</ul>
+<ul>
+<li>对于已经创建的实例，Vue 不能动态添加根级别的响应式属性。<ul>
+<li>但是，可以使用 Vue.set(object, key, value) 方法向嵌套对象添加响应式属性。</li>
+<li>你还可以使用 vm.$set 实例方法，它只是全局 Vue.set 的别名;</li>
+</ul>
+</li>
+<li>有时你可能需要为已有对象赋予多个新属性，<ul>
+<li>比如使用 Object.assign() 或 _.extend()。</li>
+<li>在这种情况下，你应该用两个对象的属性创建一个新的对象。</li>
+<li>你应该这样做：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">this.userProfile = Object.assign(&#123;&#125;, this.userProfile, &#123;</div><div class="line"> age: 27,</div><div class="line"> favoriteColor: &apos;Vue Green&apos;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="显示过滤-排序结果"><a href="#显示过滤-排序结果" class="headerlink" title="显示过滤/排序结果"></a><a href="https://cn.vuejs.org/v2/guide/list.html#显示过滤-排序结果" target="_blank" rel="external">显示过滤/排序结果</a></h3><ul>
+<li>有时，我们想要显示一个数组的过滤或排序副本，<ul>
+<li>而不实际改变或重置原始数据。</li>
+<li>在这种情况下，可以创建返回过滤或排序数组的计算属性。</li>
+<li>在计算属性不适用的情况下 (例如，在嵌套 v-for 循环中) 你可以使用一个 method 方法;<h3 id="一段取值范围的v-for"><a href="#一段取值范围的v-for" class="headerlink" title="一段取值范围的v-for"></a><a href="https://cn.vuejs.org/v2/guide/list.html#一段取值范围的-v-for" target="_blank" rel="external">一段取值范围的v-for</a></h3></li>
+<li>v-for 也可以取整数。在这种情况下，它将重复多次模板。<h3 id="v-for-on-a"><a href="#v-for-on-a" class="headerlink" title="v-for on a "></a><a href="https://cn.vuejs.org/v2/guide/list.html#v-for-on-a-lt-template-gt" target="_blank" rel="external">v-for on a <template></template></a></h3></li>
+<li>类似于 v-if，你也可以利用带有 v-for 的 <template> 渲染多个元素。<h3 id="v-for-with-v-if"><a href="#v-for-with-v-if" class="headerlink" title="v-for with v-if"></a><a href="https://cn.vuejs.org/v2/guide/list.html#v-for-with-v-if" target="_blank" rel="external">v-for with v-if</a></h3></template></li>
+</ul>
+<ul>
+<li>当它们处于同一节点，v-for 的优先级比 v-if 更高，</li>
+</ul>
+<ul>
+<li>这意味着 v-if 将分别重复运行于每个 v-for 循环中。</li>
+<li>当你想为仅有的一些项渲染节点时，</li>
+<li>这种优先级的机制会十分有用;</li>
+</ul>
+<ul>
+<li>而如果你的目的是有条件地跳过循环的执行，</li>
+</ul>
+<ul>
+<li>那么可以将 v-if 置于外层元素 (或 <template>)上。 <h3 id="一个组件的v-for"><a href="#一个组件的v-for" class="headerlink" title="一个组件的v-for"></a><a href="https://cn.vuejs.org/v2/guide/list.html#一个组件的-v-for" target="_blank" rel="external">一个组件的v-for</a></h3></template></li>
+</ul>
+<ul>
+<li>在自定义组件里，</li>
+</ul>
+<ul>
+<li>你可以像任何普通元素一样用 v-for 。</li>
+</ul>
+<ul>
+<li>然而，任何数据都不会被自动传递到组件里，</li>
+</ul>
+<ul>
+<li>因为组件有自己独立的作用域。</li>
+<li>为了把迭代数据传递到组件里，</li>
+<li>我们要用 props;</li>
+</ul>
+<ul>
+<li>不自动将 item 注入到组件里的原因是，</li>
+</ul>
+<ul>
+<li>这会使得组件与 v-for 的运作紧密耦合。</li>
+<li>明确组件数据的来源能够使组件在其他场合重复使用。 </li>
+</ul>
+<ul>
+<li>下面是一个简单的 todo list 的完整例子：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> &lt;div id=&quot;todo-list-example&quot;&gt;</div><div class="line">  &lt;input</div><div class="line">    v-model=&quot;newTodoText&quot;</div><div class="line">    v-on:keyup.enter=&quot;addNewTodo&quot;</div><div class="line">    placeholder=&quot;Add a todo&quot;</div><div class="line">  &gt;</div><div class="line">  &lt;ul&gt;</div><div class="line">    &lt;li</div><div class="line">      is=&quot;todo-item&quot;</div><div class="line">      v-for=&quot;(todo, index) in todos&quot;</div><div class="line">      v-bind:key=&quot;todo.id&quot;</div><div class="line">      v-bind:title=&quot;todo.title&quot;</div><div class="line">      v-on:remove=&quot;todos.splice(index, 1)&quot;</div><div class="line">    &gt;&lt;/li&gt;</div><div class="line">  &lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注意这里的 is=”todo-item” 属性。<br>这种做法在使用 DOM 模板时是十分必要的，<br>因为在 <ul> 元素内只有 <li> 元素会被看作有效内容。<br>这样做实现的效果与 <todo-item> 相同，<br>但是可以避开一些潜在的浏览器解析错误。<br>查看 <a href="https://cn.vuejs.org/v2/guide/components.html#DOM-模板解析说明" target="_blank" rel="external">DOM 模板解析</a> 说明 来了解更多信息。 </todo-item></li></ul></p>
+</blockquote>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a><a href="https://cn.vuejs.org/v2/guide/events.html" target="_blank" rel="external">事件处理</a></h2><h3 id="监听事件"><a href="#监听事件" class="headerlink" title="监听事件"></a><a href="https://cn.vuejs.org/v2/guide/events.html#监听事件" target="_blank" rel="external">监听事件</a></h3><blockquote>
+<p>可以用 v-on 指令监听 DOM 事件来触发一些 JavaScript 代码。</p>
+</blockquote>
+<h3 id="方法事件处理器"><a href="#方法事件处理器" class="headerlink" title="方法事件处理器"></a><a href="https://cn.vuejs.org/v2/guide/events.html#方法事件处理器" target="_blank" rel="external">方法事件处理器</a></h3><blockquote>
+<p>许多事件处理的逻辑都很复杂，<br>所以直接把 JavaScript 代码写在 v-on 指令中是不可行的。<br>因此 v-on 可以接收一个定义的方法来调用。</p>
+</blockquote>
+<h3 id="内联处理器里的方法"><a href="#内联处理器里的方法" class="headerlink" title="内联处理器里的方法"></a><a href="https://cn.vuejs.org/v2/guide/events.html#内联处理器里的方法" target="_blank" rel="external">内联处理器里的方法</a></h3><blockquote>
+<p>除了直接绑定到一个方法，也可以用内联 JavaScript 语句:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;button v-on:click=&quot;say(&apos;hi&apos;)&quot;&gt;Say hi&lt;/button&gt;</div></pre></td></tr></table></figure></p>
+<p>有时也需要在内联语句处理器中访问原生 DOM 事件。<br>可以用特殊变量 $event 把它传入方法, eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// template</div><div class="line">&lt;button v-on:click=&quot;warn(&apos;Form cannot be submitted yet.&apos;, $event)&quot;&gt;</div><div class="line">  Submit</div><div class="line">&lt;/button&gt;</div><div class="line"></div><div class="line">// ...</div><div class="line">methods: &#123;</div><div class="line">  warn: function (message, event) &#123;</div><div class="line">    // 现在我们可以访问原生事件对象</div><div class="line">    if (event) event.preventDefault()</div><div class="line">    alert(message)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p><a href="https://cn.vuejs.org/v2/guide/events.html#事件修饰符" target="_blank" rel="external">事件修饰符</a></p>
+<ol>
+<li><blockquote>
+<p>在事件处理程序中调用 event.preventDefault() 或 event.stopPropagation() 是非常常见的需求。<br>尽管我们可以在 methods 中轻松实现这点，<br>但更好的方式是：methods 只有纯粹的数据逻辑，<br>而不是去处理 DOM 事件细节。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<h3 id="为了解决这个问题，Vue-js-为-v-on-提供了事件修饰符。"><a href="#为了解决这个问题，Vue-js-为-v-on-提供了事件修饰符。" class="headerlink" title="为了解决这个问题，Vue.js 为 v-on 提供了事件修饰符。"></a>为了解决这个问题，Vue.js 为 v-on 提供了事件修饰符。</h3><p>通过由点 (.) 表示的指令后缀来调用修饰符。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<h5 id="stop"><a href="#stop" class="headerlink" title=".stop"></a>.stop</h5><h5 id="prevent"><a href="#prevent" class="headerlink" title=".prevent"></a>.prevent</h5><h5 id="capture"><a href="#capture" class="headerlink" title=".capture"></a>.capture</h5><h5 id="self"><a href="#self" class="headerlink" title=".self"></a>.self</h5><h5 id="once"><a href="#once" class="headerlink" title=".once"></a>.once</h5></blockquote>
+</li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-12-05T12:16:05.887Z" itemprop="dateUpdated">2017-12-05 20:16:05</time>
+</span><br>
+
+
+        
+        让文字梳理技能，用技能创造价值。
+        
+    </div>
+    <footer>
+        <a href="http://doc2git.com">
+            <img src="/img/avatar.jpg" alt="doc2git">
+            doc2git
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+
+<div class="page-share" id="pageShare">
+
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://doc2git.com/2017/11/07/vue文档语录/&title=《vue文档语录》 — icccc.cc   -   周瑜.com&pic=http://doc2git.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://doc2git.com/2017/11/07/vue文档语录/&title=《vue文档语录》 — icccc.cc   -   周瑜.com&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://doc2git.com/2017/11/07/vue文档语录/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue文档语录》 — icccc.cc   -   周瑜.com&url=http://doc2git.com/2017/11/07/vue文档语录/&via=http://doc2git.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://doc2git.com/2017/11/07/vue文档语录/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/11/07/代码测试框架和断言库/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">代码测试框架和断言库</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/11/04/nodejs优质文档链群/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">nodejs优质文档</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>doc2git &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://doc2git.com.cn" target="_blank">doc2git</a> 
+	<!--	Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a> -->
+            </span>
+	    <span>
+		Tel <a href="javascript:;">15823170299</a>
+	    </span>
+        </p>
+    </div>
+</footer>
+
+
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+
+<div class="global-share" id="globalShare">
+
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://doc2git.com/2017/11/07/vue文档语录/&title=《vue文档语录》 — icccc.cc   -   周瑜.com&pic=http://doc2git.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://doc2git.com/2017/11/07/vue文档语录/&title=《vue文档语录》 — icccc.cc   -   周瑜.com&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://doc2git.com/2017/11/07/vue文档语录/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue文档语录》 — icccc.cc   -   周瑜.com&url=http://doc2git.com/2017/11/07/vue文档语录/&via=http://doc2git.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://doc2git.com/2017/11/07/vue文档语录/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://doc2git.com/2017/11/07/vue文档语录/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="/js/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.14"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.14" async></script>
+
+
+
+
+
+
+<script async src="/js/busuanzi.pure.min.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

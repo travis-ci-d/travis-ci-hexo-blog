@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Todo-2017.10-week4 | icccc.cc   -   周瑜.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="plan,todo,2017">
+    <meta name="description" content="完善我的博客中vue便签模块;   DONE    让新的便签条目默认显示在最前面；   DONE    添加功能:     **DONE**   加热(冷文本变热); **DONE**   降温(热文本变冷); **DONE**   移除(移除文本)；    DONE    最后一个操作的简要提示功能: **DONE**    监听 *加热*　并显示提示信息； **DONE**    监听 *">
+<meta name="keywords" content="plan,todo,2017">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Todo-2017.10-week4">
+<meta property="og:url" content="http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/index.html">
+<meta property="og:site_name" content="icccc.cc   -   周瑜.com">
+<meta property="og:description" content="完善我的博客中vue便签模块;   DONE    让新的便签条目默认显示在最前面；   DONE    添加功能:     **DONE**   加热(冷文本变热); **DONE**   降温(热文本变冷); **DONE**   移除(移除文本)；    DONE    最后一个操作的简要提示功能: **DONE**    监听 *加热*　并显示提示信息； **DONE**    监听 *">
+<meta property="og:updated_time" content="2017-12-05T12:16:05.887Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Todo-2017.10-week4">
+<meta name="twitter:description" content="完善我的博客中vue便签模块;   DONE    让新的便签条目默认显示在最前面；   DONE    添加功能:     **DONE**   加热(冷文本变热); **DONE**   降温(热文本变冷); **DONE**   移除(移除文本)；    DONE    最后一个操作的简要提示功能: **DONE**    监听 *加热*　并显示提示信息； **DONE**    监听 *">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.14">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">doc2git</h5>
+          <a href="mailto:ivuex@yahoo.com" title="ivuex@yahoo.com" class="mail">ivuex@yahoo.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/mirrors"  >
+                <i class="icon icon-lg icon-home"></i>
+                镜像
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/note"  >
+                <i class="icon icon-lg icon-sticky-note"></i>
+                便签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/things"  >
+                <i class="icon icon-lg icon-things"></i>
+                计划列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                参考链群
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-categories"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/ivuex" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/edit-code-view--pad"  >
+                <i class="icon icon-lg icon-read-manual"></i>
+                读文档
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+            <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Todo-2017.10-week4</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off"
+                   placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <!-- Below lines Added by doc2git -->
+        <div class="comments">
+            <!--<a id="noteWrap" href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="note">-->
+                <!--<i id="noteBtn" style="font-weight:900;" class="icon icon-lg icon-sticky-note-o"></i>-->
+            <!--</a>-->
+            <!--<div id="stickyNoteWrap" class="global-share"-->
+                 <!--style="background-color:transparent; padding:4px 6px; display:flex; justify-content:center box-shadow:0 0 2px 0 rgba(0,0,0,0.16), 0 0px 0px 0 rgba(0,0,0,0.12)">-->
+                <!--<iframe-->
+                    <!--background="transparent"-->
+                    <!--width="252"-->
+                    <!--height="290"-->
+                    <!--box-sizing="border-box"-->
+                    <!--frameborder="0"-->
+                    <!--scrolling="no"-->
+                    <!--marginheight="0"-->
+                    <!--marginwidth="0"-->
+                    <!--src='http://localhost:8080/note'>-->
+                    <!--style="padding:8px 6px"-->
+                <!--</iframe>-->
+            <!--</div>-->
+        </div>
+        <!-- Above lines Added by doc2git -->
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Todo-2017.10-week4</h1>
+        <h5 class="subtitle">
+            
+            <time datetime="2017-10-23T03:11:20.000Z" itemprop="datePublished" class="page-time">
+  2017-10-23
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/plan/">plan</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/plan/todo/">todo</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/plan/todo/2017/">2017</a></li></ul></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-things_17.10.16-17.10.22"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Todo-2017.10-week4</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-10-23 11:11:20" datetime="2017-10-23T03:11:20.000Z"  itemprop="datePublished">2017-10-23</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/plan/">plan</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/plan/todo/">todo</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/plan/todo/2017/">2017</a></li></ul></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <ul>
+<li><p>完善我的博客中vue便签模块;</p>
+<p>  <strong>DONE</strong>    让新的便签条目默认显示在最前面；</p>
+<p>  <strong>DONE</strong>    添加功能:    </p>
+<pre><code>**DONE**   加热(冷文本变热);
+**DONE**   降温(热文本变冷);
+**DONE**   移除(移除文本)； 
+</code></pre><p>  <strong>DONE</strong>    最后一个操作的简要提示功能:</p>
+<pre><code>**DONE**    监听 *加热*　并显示提示信息；
+**DONE**    监听 *降温*　并显示提示信息；
+**DONE**    监听 *移除*　并显示提示信息；
+</code></pre><p>  <strong>本地搜索</strong></p>
+<pre><code>**DONE**   添加本地字符串搜索功能；
+**DONE**   添加本地正则搜索功能；
+</code></pre><p>  <strong>开发字典功能</strong></p>
+<pre><code>+   开发本地词典UI；
++   获取并探索api
+    -   衔接yahoo翻译api;
+    -   衔接金山翻译api;
+    -   衔接百度翻译api;
+    -   打通api和ui交互;
++   优化
+</code></pre><ul>
+<li>回滚<ul>
+<li>添加正反序热切换功能；</li>
+<li>添加历史命令回滚功能；</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>对以上功能进行排版；</li>
+<li>让尽可能多的使用该便签，以发并修复现存在的其他问题和需要优化的地方；</li>
+<li>理顺该便签页优雅生成静态页面的自动化部署流程，以便部署到 <em>git　pages</em> 站点中去；</li>
+<li>合并我的博客的　<em>note-dev</em> 分支到　master分支;</li>
+<li>尝试将该便签项目移植为 <em>Firefox 插件</em>;</li>
+</ul>
+</li>
+<li><p>尝试实现：　</p>
+<ul>
+<li><p>在产品原型搭建的初期，</p>
+<p>使用web组件,如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">    &lt;link rel=&quot;import&quot; href=&quot;src/new.html&quot;&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">      ...           </div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    var lnk = document.querySelector(&apos;link[rel=&quot;import&quot;]&apos;);</div><div class="line">    var content = link.import;</div><div class="line">    var aDomVariable = content.querySelector(&apos;aSelector&apos;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>的方式提取我要的部分，<br>进行ui原型预览；</p>
+</li>
+<li>尝试解决的问题：<pre><code>-   避免复制粘贴过程的琐碎；
+-   避免复制和粘贴后的修改及扩展问题；
+-   避免样式和css的跨域问题；
+</code></pre></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-12-05T12:16:05.887Z" itemprop="dateUpdated">2017-12-05 20:16:05</time>
+</span><br>
+
+
+        
+        让文字梳理技能，用技能创造价值。
+        
+    </div>
+    <footer>
+        <a href="http://doc2git.com">
+            <img src="/img/avatar.jpg" alt="doc2git">
+            doc2git
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2017/">2017</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plan/">plan</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/todo/">todo</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+
+<div class="page-share" id="pageShare">
+
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/&title=《Todo-2017.10-week4》 — icccc.cc   -   周瑜.com&pic=http://doc2git.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/&title=《Todo-2017.10-week4》 — icccc.cc   -   周瑜.com&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Todo-2017.10-week4》 — icccc.cc   -   周瑜.com&url=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/&via=http://doc2git.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/10/23/Vue单元测试/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">vue深入学习</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/10/20/JS打包工具/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JS打包工具</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>doc2git &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://doc2git.com.cn" target="_blank">doc2git</a> 
+	<!--	Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a> -->
+            </span>
+	    <span>
+		Tel <a href="javascript:;">15823170299</a>
+	    </span>
+        </p>
+    </div>
+</footer>
+
+
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+
+<div class="global-share" id="globalShare">
+
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/&title=《Todo-2017.10-week4》 — icccc.cc   -   周瑜.com&pic=http://doc2git.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/&title=《Todo-2017.10-week4》 — icccc.cc   -   周瑜.com&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Todo-2017.10-week4》 — icccc.cc   -   周瑜.com&url=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/&via=http://doc2git.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://doc2git.com/2017/10/23/things_17.10.16-17.10.22/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="/js/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.14"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.14" async></script>
+
+
+
+
+
+
+<script async src="/js/busuanzi.pure.min.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
