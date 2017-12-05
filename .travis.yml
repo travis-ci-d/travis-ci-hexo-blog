@@ -6,8 +6,6 @@ branches:
   - master
 before_install:
 - openssl aes-256-cbc -K $encrypted_b6a73d0683df_key -iv $encrypted_b6a73d0683df_iv
-  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
-- openssl aes-256-cbc -K $encrypted_b6a73d0683df_key -iv $encrypted_b6a73d0683df_iv
   -in .travis/ssh_key.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
