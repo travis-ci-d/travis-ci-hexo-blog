@@ -1,36 +1,24 @@
-# 使用的语言
 language: node_js
-
-# 使用的nodejs版本
 node_js:
- - 9.2.0
-# 仓库的分支
+- 9.2.0
 branches:
   only:
   - master
-
-# 执行isntall前需要执行的命令
-before_install: # 配置解密信息
- - openssl aes-256-cbc -K $encrypted_b6a73d0683df_key -iv $encrypted_b6a73d0683df_iv
-   -in .travis/ssh_key.enc -out ~/.ssh/id_rsa -d
-
-# 改变文件权限 
- - chmod 600 ~/.ssh/id_rsa
-# 配置 ssh
- - eval $(ssh-agent)
- - ssh-add ~/.ssh/id_rsa
- - cp .travis/ssh_config ~/.ssh/config
-# 配置git 的个人信息
- - git config --global user.name 'travis-ci-d'
- - git config --global user.email 'travis-ci-d@repo.ren'
-# 执行install
+before_install:
+- openssl aes-256-cbc -K $encrypted_b6a73d0683df_key -iv $encrypted_b6a73d0683df_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_b6a73d0683df_key -iv $encrypted_b6a73d0683df_iv
+  -in .travis/ssh_key.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+- git config --global user.name 'travis-ci-d'
+- git config --global user.email 'travis-ci-d@repo.ren'
 install:
- - npm install hexo-cli -g 
- - npm install
-
-# 执行命令脚本
+- npm install hexo-cli -g
+- npm install
 script:
- - hexo clean 
- - hexo g
- - hexo d
-
+- hexo clean
+- hexo g
+- hexo d
